@@ -1,2 +1,3 @@
-# ZinoJS
-ZinoJS - A complete, reactive JS micro-framework by Sina
+# ZinoJS Advanced
+
+A reactive JavaScript micro-framework by Sina.

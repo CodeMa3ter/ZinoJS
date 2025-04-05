@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>ZinoJS Counter</title></head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    import { render } from '../src/core/renderer.js';
+    import { createState } from '../src/hooks/state.js';
+
+    const state = createState({ count: 0 });
+    const [getCount, setCount] = state.useState('count');
+
+    function Counter() {
+      return `
+        <div>
+          <p>Count: \${getCount()}</p>
+          <button onclick="increment()">Increment</button>
+        </div>`;
+    }
+
+    window.increment = () => {
+      setCount(getCount()() + 1);
+      render(Counter, '#app');
+    };
+
+    state.subscribe(() => render(Counter, '#app'));
+    render(Counter, '#app');
+  </script>
+</body>
+</html>

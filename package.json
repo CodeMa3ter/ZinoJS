@@ -1,0 +1,14 @@
+{
+  "name": "zinojs",
+  "version": "1.0.1",
+  "description": "ZinoJS - A reactive JS micro-framework by Sina",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": [
+    "framework",
+    "javascript",
+    "reactive"
+  ],
+  "author": "Sina",
+  "license": "MIT"
+}
